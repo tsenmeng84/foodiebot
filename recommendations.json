@@ -1,0 +1,68 @@
+{
+  "steak": [
+    {
+      "title": "TTDI Meatpoint",
+      "url": "https://maps.app.goo.gl/oxkrrxBLjHWopWFy6",
+      "user": "tsenmeng",
+      "rating": 9
+    },
+    {
+      "title": "Honest Butcher",
+      "url": "https://maps.app.goo.gl/zDPGJ8avGku7gcvr7",
+      "user": "tsenmeng",
+      "rating": 9
+    },
+    {
+      "title": "Grub by Ah Hong and friends",
+      "url": "https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83",
+      "user": "tsenmeng",
+      "rating": 8
+    },
+    {
+      "title": "Savage Steakhouse | Best Steakhouse Petaling Jaya",
+      "url": "https://www.savagesteakhouse.com.my/",
+      "user": "tsenmeng",
+      "rating": 0
+    }
+  ],
+  "fish n chips": [
+    {
+      "title": "Edward’s Urban Fish & Chips | Masai",
+      "url": "https://www.facebook.com/edwardsufnc",
+      "user": "tsenmeng",
+      "rating": 9
+    }
+  ],
+  "indian": [
+    {
+      "title": "Karachi Darbar",
+      "url": "https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8",
+      "user": "tsenmeng",
+      "rating": 8
+    }
+  ],
+  "french": [
+    {
+      "title": "Delia wine bistro ttdi",
+      "url": "https://www.instagram.com/reel/DIyY_7pz0dN/?igsh=MWZieTBicjlkNGlmdg==",
+      "user": "tsenmeng",
+      "rating": 8
+    }
+  ],
+  "fusion": [
+    {
+      "title": "New title",
+      "url": "https://www.instagram.com/reel/DHBQRsczztm/?igsh=MXc2dnk1MW5odXk5MQ==",
+      "user": "phixsius_a",
+      "rating": 8
+    }
+  ],
+  "italian": [
+    {
+      "title": "Timothy Cafe",
+      "url": "https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl",
+      "user": "tsenmeng",
+      "rating": 0
+    }
+  ]
+}
