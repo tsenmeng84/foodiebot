@@ -1,3 +1,5 @@
+Below is a sample HTML structure for the given food recommendations. This structure uses modern card designs with light styling and hover effects. Each restaurant is presented as a card with a link, user recommendation, rating, and an optional image.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -8,20 +10,31 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #f4f4f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
         }
         h2 {
-            color: #343a40;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
         .card {
-            background-color: #ffffff;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
             transition: transform 0.2s;
         }
         .card:hover {
@@ -29,78 +42,108 @@
         }
         .card img {
             width: 100%;
-            border-radius: 5px;
+            height: 150px;
+            object-fit: cover;
         }
-        .card a {
-            color: #007bff;
+        .card-content {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 18px;
+            margin: 0;
+            color: #0073bb;
             text-decoration: none;
-            font-size: 1.2em;
         }
-        .card a:hover {
+        .card-title:hover {
             text-decoration: underline;
         }
-        .rating {
-            color: #ffc107;
-            font-size: 1em;
+        .card-text {
+            margin-top: 5px;
+            color: #555;
         }
-        .user {
-            font-size: 0.9em;
-            color: #6c757d;
+        .rating {
+            font-size: 16px;
+            color: #ffbf00;
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <h2>Steak Recommendations</h2>
     <div class="card">
-        <a href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6" target="_blank">TTDI Meatpoint</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">9/10 ★★★★★★★★★☆</p>
-        <img src="https://via.placeholder.com/150" alt="TTDI Meatpoint">
+        <a href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="TTDI Meatpoint">
+        </a>
+        <div class="card-content">
+            <a href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6" class="card-title" target="_blank">TTDI Meatpoint</a>
+            <p class="card-text">by tsenmeng, rated 9/10 <span class="rating">★★★★★★★★★☆</span></p>
+        </div>
     </div>
     <div class="card">
-        <a href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7" target="_blank">Honest Butcher</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">9/10 ★★★★★★★★★☆</p>
-        <img src="https://via.placeholder.com/150" alt="Honest Butcher">
+        <a href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Honest Butcher">
+        </a>
+        <div class="card-content">
+            <a href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7" class="card-title" target="_blank">Honest Butcher</a>
+            <p class="card-text">by tsenmeng, rated 9/10 <span class="rating">★★★★★★★★★☆</span></p>
+        </div>
     </div>
     <div class="card">
-        <a href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83" target="_blank">Grub by Ah Hong and friends</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">8/10 ★★★★★★★★☆☆</p>
-        <img src="https://via.placeholder.com/150" alt="Grub by Ah Hong and friends">
+        <a href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Grub by Ah Hong and friends">
+        </a>
+        <div class="card-content">
+            <a href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83" class="card-title" target="_blank">Grub by Ah Hong and friends</a>
+            <p class="card-text">by tsenmeng, rated 8/10 <span class="rating">★★★★★★★★☆☆</span></p>
+        </div>
     </div>
     <div class="card">
-        <a href="https://www.savagesteakhouse.com.my/" target="_blank">Savage Steakhouse | Best Steakhouse Petaling Jaya</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">0/10 ☆☆☆☆☆☆☆☆☆☆</p>
-        <img src="https://via.placeholder.com/150" alt="Savage Steakhouse">
+        <a href="https://www.savagesteakhouse.com.my/" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Savage Steakhouse">
+        </a>
+        <div class="card-content">
+            <a href="https://www.savagesteakhouse.com.my/" class="card-title" target="_blank">Savage Steakhouse | Best Steakhouse Petaling Jaya</a>
+            <p class="card-text">by tsenmeng, rated 0/10 <span class="rating">☆☆☆☆☆☆☆☆☆☆</span></p>
+        </div>
     </div>
 
     <h2>Fish N Chips Recommendations</h2>
     <div class="card">
-        <a href="https://www.facebook.com/edwardsufnc" target="_blank">Edward’s Urban Fish & Chips | Masai</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">9/10 ★★★★★★★★★☆</p>
-        <img src="https://via.placeholder.com/150" alt="Edward’s Urban Fish & Chips">
+        <a href="https://www.facebook.com/edwardsufnc" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Edward’s Urban Fish & Chips">
+        </a>
+        <div class="card-content">
+            <a href="https://www.facebook.com/edwardsufnc" class="card-title" target="_blank">Edward’s Urban Fish & Chips | Masai</a>
+            <p class="card-text">by tsenmeng, rated 9/10 <span class="rating">★★★★★★★★★☆</span></p>
+        </div>
     </div>
 
     <h2>Italian Recommendations</h2>
     <div class="card">
-        <a href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl" target="_blank">Timothy Cafe</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">0/10 ☆☆☆☆☆☆☆☆☆☆</p>
-        <img src="https://via.placeholder.com/150" alt="Timothy Cafe">
+        <a href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Timothy Cafe">
+        </a>
+        <div class="card-content">
+            <a href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl" class="card-title" target="_blank">Timothy Cafe</a>
+            <p class="card-text">by tsenmeng, rated 0/10 <span class="rating">☆☆☆☆☆☆☆☆☆☆</span></p>
+        </div>
     </div>
 
     <h2>Indian Recommendations</h2>
     <div class="card">
-        <a href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8" target="_blank">Karachi Darbar</a>
-        <p class="user">by tsenmeng</p>
-        <p class="rating">8/10 ★★★★★★★★☆☆</p>
-        <img src="https://via.placeholder.com/150" alt="Karachi Darbar">
+        <a href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8" target="_blank">
+            <img src="https://via.placeholder.com/150" alt="Karachi Darbar">
+        </a>
+        <div class="card-content">
+            <a href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8" class="card-title" target="_blank">Karachi Darbar</a>
+            <p class="card-text">by tsenmeng, rated 8/10 <span class="rating">★★★★★★★★☆☆</span></p>
+        </div>
     </div>
+</div>
 
 </body>
 </html>
 ```
+
+This HTML page is styled to be light and mobile-friendly, with subtle hover effects and a clean, modern look. Each restaurant entry is presented as a card with a placeholder image, and the ratings
