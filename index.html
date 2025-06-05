@@ -17,14 +17,18 @@
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        .cuisine-group {
+        .cuisine-section {
             margin-bottom: 30px;
+        }
+        .cuisine-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
         }
         .card {
             display: flex;
             background-color: #1e1e1e;
             border-radius: 8px;
-            overflow: hidden;
+            padding: 15px;
             margin-bottom: 15px;
             transition: transform 0.2s;
         }
@@ -32,94 +36,101 @@
             transform: scale(1.02);
         }
         .thumbnail {
-            flex: 0 0 150px;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 15px;
         }
         .content {
-            padding: 10px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
         .title {
             font-size: 1.5em;
-            color: #4caf50;
+            color: #00bcd4;
             text-decoration: none;
         }
         .title:hover {
             text-decoration: underline;
         }
         .recommender {
+            margin-top: 5px;
             font-size: 0.9em;
             color: #ccc;
         }
         .rating {
-            font-size: 0.9em;
-            color: #ffd700;
+            font-size: 1.1em;
+            color: gold;
         }
     </style>
 </head>
 <body>
     <h1>Foodie Bot Recommendations</h1>
-    <div class="cuisine-group">
+
+    <div class="cuisine-section">
+        <div class="cuisine-title">Steak</div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/steak.png');"></div>
+            <img src="media/steak.png" alt="TTDI Meatpoint" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6">TTDI Meatpoint</a>
+                <a href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6" class="title">TTDI Meatpoint</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 9/10 ★★★★★★★★★☆</div>
+                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
             </div>
         </div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/steak.png');"></div>
+            <img src="media/steak.png" alt="Honest Butcher" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7">Honest Butcher</a>
+                <a href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7" class="title">Honest Butcher</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 9/10 ★★★★★★★★★☆</div>
+                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
             </div>
         </div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/steak.png');"></div>
+            <img src="media/steak.png" alt="Grub by Ah Hong and friends" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83">Grub by Ah Hong and friends</a>
+                <a href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83" class="title">Grub by Ah Hong and friends</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 8/10 ★★★★★★★★☆☆</div>
+                <div class="rating">Rating: 8/10 ★★★★★★★★☆☆</div>
             </div>
         </div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/steak.png');"></div>
+            <img src="media/steak.png" alt="Savage Steakhouse" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://www.savagesteakhouse.com.my/">Savage Steakhouse | Best Steakhouse Petaling Jaya</a>
+                <a href="https://www.savagesteakhouse.com.my/" class="title">Savage Steakhouse</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
+                <div class="rating">Rating: 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
             </div>
         </div>
     </div>
-    <div class="cuisine-group">
+
+    <div class="cuisine-section">
+        <div class="cuisine-title">Fish & Chips</div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/fish_n_chips.jpg');"></div>
+            <img src="media/fish_n_chips.jpg" alt="Edward’s Urban Fish & Chips" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://www.facebook.com/edwardsufnc">Edward’s Urban Fish & Chips | Masai</a>
+                <a href="https://www.facebook.com/edwardsufnc" class="title">Edward’s Urban Fish & Chips</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 9/10 ★★★★★★★★★☆</div>
+                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
             </div>
         </div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/italian.jpg');"></div>
+            <img src="media/italian.jpg" alt="Timothy Cafe" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl">Timothy Cafe</a>
+                <a href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl" class="title">Timothy Cafe</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
+                <div class="rating">Rating: 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
             </div>
         </div>
+    </div>
+
+    <div class="cuisine-section">
+        <div class="cuisine-title">Indian</div>
         <div class="card">
-            <div class="thumbnail" style="background-image: url('media/indian.jpg');"></div>
+            <img src="media/indian.jpg" alt="Karachi Darbar" class="thumbnail">
             <div class="content">
-                <a class="title" href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8">Karachi Darbar</a>
+                <a href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8" class="title">Karachi Darbar</a>
                 <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rated 8/10 ★★★★★★★★☆☆</div>
+                <div class="rating">Rating: 8/10 ★★★★★★★★☆☆</div>
             </div>
         </div>
     </div>
