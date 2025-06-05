@@ -1,4 +1,4 @@
-Below is a modern Yelp-style HTML page that showcases the food recommendations you provided. Each entry is displayed as a styled card, grouped by cuisine. The layout uses Flexbox for responsiveness, and the design is clean and modern.
+Here's a modern Yelp-style HTML page layout with the provided food recommendations, organized into styled cards grouped by cuisine. The design uses a flex layout for responsiveness and clean styling. 
 
 ```html
 <!DOCTYPE html>
@@ -10,126 +10,140 @@ Below is a modern Yelp-style HTML page that showcases the food recommendations y
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
             margin: 0;
             padding: 20px;
+            background-color: #f9f9f9;
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        .cuisine-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .cuisine-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
         .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             display: flex;
-            margin: 10px;
-            max-width: calc(33% - 20px);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.2s;
+            margin-bottom: 10px;
+            width: calc(100% - 20px);
+            max-width: 600px;
         }
-        .card:hover {
-            transform: scale(1.02);
-        }
-        .thumbnail {
+        .card img {
             width: 120px;
-            height: 120px;
-            object-fit: cover;
+            height: auto;
         }
-        .content {
+        .card-content {
             padding: 15px;
-            flex-grow: 1;
+            flex: 1;
         }
-        .title {
-            font-size: 1.2em;
+        .card-title {
+            font-size: 18px;
             color: #007BFF;
             text-decoration: none;
         }
-        .recommender {
-            font-size: 0.9em;
-            color: #555;
+        .card-title:hover {
+            text-decoration: underline;
         }
         .rating {
-            color: #FFD700;
+            color: #f39c12;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .card {
-                max-width: calc(50% - 20px);
+                flex-direction: column;
+                width: 100%;
             }
-        }
-        @media (max-width: 480px) {
-            .card {
-                max-width: 100%;
+            .card img {
+                width: 100%;
+                height: auto;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Food Recommendations</h1>
-    <div class="container">
+
+<div class="container">
+    <div class="cuisine-group">
+        <div class="cuisine-title">Steakhouses</div>
         <div class="card">
-            <img src="media/steak.png" alt="TTDI Meatpoint" class="thumbnail">
-            <div class="content">
-                <a href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6" class="title">TTDI Meatpoint</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
+            <img src="media/steak.png" alt="TTDI Meatpoint">
+            <div class="card-content">
+                <a class="card-title" href="https://maps.app.goo.gl/oxkrrxBLjHWopWFy6">TTDI Meatpoint</a>
+                <div>by tsenmeng, rated <span class="rating">9/10 ★★★★★★★★★☆</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="media/steak.png" alt="Honest Butcher" class="thumbnail">
-            <div class="content">
-                <a href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7" class="title">Honest Butcher</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
+            <img src="media/steak.png" alt="Honest Butcher">
+            <div class="card-content">
+                <a class="card-title" href="https://maps.app.goo.gl/zDPGJ8avGku7gcvr7">Honest Butcher</a>
+                <div>by tsenmeng, rated <span class="rating">9/10 ★★★★★★★★★☆</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="media/steak.png" alt="Grub by Ah Hong and friends" class="thumbnail">
-            <div class="content">
-                <a href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83" class="title">Grub by Ah Hong and friends</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 8/10 ★★★★★★★★☆☆</div>
+            <img src="media/steak.png" alt="Grub by Ah Hong and friends">
+            <div class="card-content">
+                <a class="card-title" href="https://www.google.com/search?client=ms-android-samsung-ss&sca_esv=48b5062a4474d02d&kgmid=%2Fg%2F11bzz_0pp6&q=Grub%20by%20Ahong%20%26%20Friends&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=58f687b71d127b83">Grub by Ah Hong and friends</a>
+                <div>by tsenmeng, rated <span class="rating">8/10 ★★★★★★★★☆☆</span></div>
             </div>
         </div>
         <div class="card">
-            <img src="media/steak.png" alt="Savage Steakhouse" class="thumbnail">
-            <div class="content">
-                <a href="https://www.savagesteakhouse.com.my/" class="title">Savage Steakhouse</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="media/fish_n_chips.jpg" alt="Edward’s Urban Fish & Chips" class="thumbnail">
-            <div class="content">
-                <a href="https://www.facebook.com/edwardsufnc" class="title">Edward’s Urban Fish & Chips</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 9/10 ★★★★★★★★★☆</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="media/italian.jpg" alt="Timothy Cafe" class="thumbnail">
-            <div class="content">
-                <a href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl" class="title">Timothy Cafe</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 0/10 ☆☆☆☆☆☆☆☆☆☆</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="media/indian.jpg" alt="Karachi Darbar" class="thumbnail">
-            <div class="content">
-                <a href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8" class="title">Karachi Darbar</a>
-                <div class="recommender">by tsenmeng</div>
-                <div class="rating">Rating: 8/10 ★★★★★★★★☆☆</div>
+            <img src="media/steak.png" alt="Savage Steakhouse">
+            <div class="card-content">
+                <a class="card-title" href="https://www.savagesteakhouse.com.my/">Savage Steakhouse</a>
+                <div>by tsenmeng, rated <span class="rating">0/10 ☆☆☆☆☆☆☆☆☆☆</span></div>
             </div>
         </div>
     </div>
+
+    <div class="cuisine-group">
+        <div class="cuisine-title">Fish & Chips</div>
+        <div class="card">
+            <img src="media/fish_n_chips.jpg" alt="Edward’s Urban Fish & Chips">
+            <div class="card-content">
+                <a class="card-title" href="https://www.facebook.com/edwardsufnc">Edward’s Urban Fish & Chips</a>
+                <div>by tsenmeng, rated <span class="rating">9/10 ★★★★★★★★★☆</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cuisine-group">
+        <div class="cuisine-title">Italian</div>
+        <div class="card">
+            <img src="media/italian.jpg" alt="Timothy Cafe">
+            <div class="card-content">
+                <a class="card-title" href="https://www.instagram.com/reel/DJvURmgSY0W/?igsh=Yzh4bjJ3dWRvNHBl">Timothy Cafe</a>
+                <div>by tsenmeng, rated <span class="rating">0/10 ☆☆☆☆☆☆☆☆☆☆</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cuisine-group">
+        <div class="cuisine-title">Indian</div>
+        <div class="card">
+            <img src="media/indian.jpg" alt="Karachi Darbar">
+            <div class="card-content">
+                <a class="card-title" href="https://www.google.com/search?client=ms-android-oneplus-terr1-rso3&sca_esv=286dcc3e3e4e435f&sxsrf=AE3TifMOIwdUDYfFfeUZd1MPf3Mg6I_L6w%3A1748403623821&kgmid=%2Fg%2F11w8l3kn9f&q=Karachi%20Darbar%20Restaurant&shndl=30&shem=lstuoc2&source=sh%2Fx%2Floc%2Fact%2Fm1%2F2&kgs=b6934df44296b2c8">Karachi Darbar</a>
+                <div>by tsenmeng, rated <span class="rating">8/10 ★★★★★★★★☆☆</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
 ```
 
 ### Explanation:
-- Each food recommendation is encapsulated in a `.card` div, which includes an image, title, recommender name, and rating.
-- The layout is responsive, adjusting the number of cards per row based on screen size using media queries.
-- The styling provides a clean and modern look, enhancing usability and readability.
+- The HTML structure includes a `container` to hold all cuisine groups.
+- Each cuisine group is defined with a title and contains multiple `card` elements for each recommendation.
+- Each `card` consists of an image, a clickable title link, and a rating display.
+- The styling uses Flexbox for layout and is mobile-responsive with media queries to adjust the layout for smaller screens.
